@@ -1,0 +1,45 @@
+<div id="partial-wrapper" class="container animated fadeIn">
+
+    <h1>QUICK JOBS SEARCH</h1>
+    <div class="spacer"></div>
+
+    <form id="quick-jobs-search-form" class="row">
+        <div class="row">
+            <div class="form-group col-md-4 col-sm-12 col-xs-12 remove-padding">
+                <label>Country:</label>
+                <label for="inputCountry"></label><select id="inputCountry" name="inputCountry" class="form-control"></select>
+            </div>
+            <div class="form-group col-md-2 col-sm-12 col-xs-12 pull-right remove-padding">
+                <label>Order By:</label>
+                <label for="inputOrderBy"></label><select id="inputOrderBy" name="inputOrderBy" class="form-control"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-12 remove-padding">
+                <label class="control-label">Enter Search Phrase and click "Search"</label>
+                <div class="input-group merged">
+                    <input id="inputSearchPhrase" name="inputSearchPhrase" class="form-control" placeholder="Type a part of what are you looking for..." type="text">
+                    <span class="input-group-btn">
+                        <button class="btn btn-success" type="submit"><span>Search</span>&nbsp;<i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+                <label id="inputSearchPhrase-error" class="error" for="inputSearchPhrase" style="display: none;"></label>
+            </div>
+        </div>
+    </form>
+
+    <!-- not found alert -->
+    <div id="not-found-jobs-wrapper" class="row" style="display: none;">
+        <div class="col-md-12 remove-padding">
+            <div class="alert alert-danger">Sorry! No vacancy found with this criteria. Please choose a better keyword or leave it empty.</div>
+        </div>
+    </div>
+    <!-- /not found alert -->
+
+    <!-- result search-->
+    <div class="row jobs-pagination"></div>
+    <div class="row" id="find-jobs-wrapper"></div>
+    <div class="row jobs-pagination"></div>
+    <!-- /result search-->
+
+</div>
