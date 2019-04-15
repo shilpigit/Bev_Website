@@ -6,11 +6,11 @@
         return {
 
             //  Live            
-            // baseApiUrl: 'https://api.oildiversity.com/api/',
-            // baseUrl: 'https://api.oildiversity.com/',
-            // baseApiAppUrl: 'https://api.oildiversity.com/api/',
-            // baseAppUrl: 'https://app.oildiversity.com/',
-            // baseRedirectImageUrl: 'https://api.oildiversity.com/api/storage/redirect?id=',
+             baseApiUrl: 'https://api.oildiversity.com/api/',
+             baseUrl: 'https://api.oildiversity.com/',
+             baseApiAppUrl: 'https://api.oildiversity.com/api/',
+             baseAppUrl: 'https://app.oildiversity.com/',
+             baseRedirectImageUrl: 'https://api.oildiversity.com/api/storage/redirect?id=',
 
             //  Development 
             //baseApiUrl: 'https://devapi.oildiversity.com/api/',
@@ -20,11 +20,11 @@
             //baseRedirectImageUrl: 'https://devapi.oildiversity.com/api/storage/redirect?id=',
 
             //  Local
-            baseApiUrl: 'http://localhost:7493/api/',
-            baseUrl: 'http://localhost:7493/',
-            baseApiAppUrl: 'http://localhost:7493/api/',
-            baseAppUrl: 'http://localhost:1056/',
-            baseRedirectImageUrl: 'http://localhost:7493/api/storage/redirect?id=',
+            //baseApiUrl: 'http://localhost:7493/api/',
+            //baseUrl: 'http://localhost:7493/',
+            //baseApiAppUrl: 'http://localhost:7493/api/',
+            //baseAppUrl: 'http://localhost:1056/',
+            //baseRedirectImageUrl: 'http://localhost:7493/api/storage/redirect?id=',
             
 
             // content keys
@@ -33,7 +33,15 @@
             aWebSiteQuarterlyMagazineContentKey: 'aWebSiteQuarterlyMagazineContentKey',
             aWebSiteQuarterlyAwardsContentKey: 'aWebSiteQuarterlyAwardsContentKey',
             aWebSiteQuarterlyAwardFormContentKey: 'aWebSiteQuarterlyAwardFormContentKey',
-            aWebSiteFAQContentKey:'aWebSiteFAQContentKey',
+            aWebSiteFAQContentKey: 'aWebSiteFAQContentKey',
+            aWebSiteEfficiencySystemContentKey: 'aWebSiteEfficiencySystemContentKey',
+            aWebSiteOurServicesContentKey: 'aWebSiteOurServicesContentKey',
+            aWebSiteBusinessPackagesContentKey: 'aWebSiteBusinessPackagesContentKey',
+            aWebSiteEntrepreneurialInnovationContentKey: 'aWebSiteEntrepreneurialInnovationContentKey',
+            aWebSiteTechnologyShowcaseContentKey: 'aWebSiteTechnologyShowcaseContentKey',
+            aWebSiteMentoringContentKey: 'aWebSiteMentoringContentKey',
+            aWebSiteBusinessAdvertisingOpportunitiesContentKey: 'aWebSiteBusinessAdvertisingOpportunitiesContentKey',
+            aWebSiteNonExecutiveBoardContentKey:'aWebSiteNonExecutiveBoardContentKey',
 
             // mail
             sendEmailTo: 'bev@oildiversity.com',
@@ -637,8 +645,7 @@
             newItem: newItem
         };
 
-        function init() {
-            debugger
+        function init() {            
             amplify.request.define('getSearch', 'ajax', {
                 url: config.baseApiAppUrl + 'vacancy/search/advanced?searchPhrase={searchPhrase}&orderByCodeValue={orderByCodeValue}&countryCodeValue={countryCodeValue}&industryExperienceCodeValue={industryExperienceCodeValue}&employmentTypeCodeValue={employmentTypeCodeValue}&salarySoughtCurrencyCodeValue={salarySoughtCurrencyCodeValue}&salarySoughtAmount={salarySoughtAmount}&educationCodeValue={educationCodeValue}&summaryOfExperienceCategoryCodeValue={summaryOfExperienceCategoryCodeValue}&experienceDisciplineFirstLevelCodeValue={experienceDisciplineFirstLevelCodeValue}&experienceDisciplineSecondLevelCodeValue={experienceDisciplineSecondLevelCodeValue}&token={token}',
                 dataType: 'json',
@@ -691,8 +698,7 @@
             });
         }
 
-        function getSearch(callbacks, data) {
-            debugger
+        function getSearch(callbacks, data) {            
             return amplify.request({
                 resourceId: 'getSearch',
                 data: data,
@@ -1690,7 +1696,7 @@ define('text!template/global/header-partial-view.html',[],function () { return '
 define('text!template/global/footer-partial-view.html',[],function () { return '<!-- Social Network -->\r\n<div id="social-network-wrapper" class="row">\r\n    <div class="container">\r\n\r\n        <!--<div class="col-lg-offset-2 col-lg-2 col-md-offset-2 col-md-2 col-sm-3 col-xs-3">-->\r\n        <!--<a href="//blog.oildiversity.com" target="_blank">-->\r\n        <!--<i class="fa fa-rss social-icon"></i><span class="hidden-sm hidden-xs">Blog</span>-->\r\n        <!--</a>-->\r\n        <!--</div>-->\r\n        <div class="col-lg-offset-3 col-lg-2 col-md-offset-3 col-md-2 col-sm-offset-3 col-sm-2 col-xs-4">\r\n            <a href="https://www.facebook.com/oildiversity/" target="_blank">\r\n                <i class="fa fa-facebook social-icon"></i><span class="hidden-sm hidden-xs">Facebook</span>\r\n            </a>\r\n        </div>\r\n        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">\r\n            <a href="https://twitter.com/oildiversity" target="_blank">\r\n                <i class="fa fa-twitter social-icon"></i><span class="hidden-sm hidden-xs">Twitter</span>\r\n            </a>\r\n        </div>\r\n        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">\r\n            <a href="https://www.linkedin.com/company/oil-diversity-global-ltd.?trk=prof-following-company-logo" target="_blank">\r\n                <i class="fa fa-linkedin social-icon"></i><span class="hidden-sm hidden-xs">Linkedin</span>\r\n            </a>\r\n        </div>\r\n    </div>\r\n</div>\r\n<!-- End Social Network -->\r\n\r\n<!-- Footer -->\r\n<div class="footer">\r\n    <div class="container">\r\n        <img class="desaturate brand-footer" src="https://cdn.oildiversity.com/app/images/logo/logo-horizontal.svg">\r\n        <br>\r\n        <a href="#!/show/?key=privacy-policy">Privacy Policy</a> | <a href="#!/show/?key=terms-of-service">Terms of Service</a>\r\n        <br>\r\n        <span>\r\n            Copyright © 2016 B.E.V Oil & Gas. All Rights Reserved.\r\n            <br>\r\n            OilDiversityGlobal® is a registered trademark of the B.E.V Oil & Gas Group.\r\n        </span>\r\n    </div>\r\n</div>\r\n<!-- End Footer -->\r\n\r\n<!-- Job Search Button -->\r\n<div id="job-search-button-right" class="" style="display: none">\r\n    <button class="btn btn-success quick-job-search-btn"><i class="fa fa-search"></i><span class="hidden-xs">&nbsp;Search Jobs</span></button>\r\n</div>\r\n<!-- Job Search Button -->';});
 
 
-define('text!template/global/main-navbar-partial-view.html',[],function () { return '<li><a href="#!">Home</a></li>\r\n<li><a href="#!/show/?key=about-us">About Us</a></li>\r\n<li><a href="#!/show/?key=contact-us">Contact Us</a></li>\r\n<li><a href="/news">Industry News</a></li>\r\n<li><a href="#!/show/?key=graduate-recruitment">Graduate Recruitment</a></li>\r\n<li><a href="#!/show/?key=community-network">Community Network</a></li>\r\n<li class="dropdown">\r\n    <a class="dropdown-toggle" data-toggle="dropdown" href="#!/show/?key=quarterly">Current Initiatives<span class="caret"></span></a>\r\n    <ul class="dropdown-menu">\r\n        <li><a href="#!/show/?key=quarterly-awards">Awards</a></li>\r\n    </ul>\r\n</li>\r\n<li><a href="#!/show/?key=frequently-asked-questions">FAQ\'s</a></li>';});
+define('text!template/global/main-navbar-partial-view.html',[],function () { return '<li><a href="#!">Home</a></li>\r\n<!--<li><a href="#!/show/?key=about-us">About Us</a></li>-->\r\n<li class="dropdown">\r\n    <a class="dropdown-toggle" data-toggle="dropdown" href="#!/show/?key=about-us">About Us<span class="caret"></span></a>\r\n    <ul class="dropdown-menu">\r\n        <li><a href="#!/show/?key=about-us">Introduction</a></li>\r\n        <li><a href="#!/show/?key=frequently-asked-questions">FAQ\'s</a></li>\r\n        <li><a href="#!/show/?key=efficiency-system">Our Efficiency System</a></li>\r\n    </ul>\r\n</li>\r\n<li class="dropdown">\r\n    <a class="dropdown-toggle" data-toggle="dropdown" href="#!/show/?key=">Our Services<span class="caret"></span></a>\r\n    <ul class="dropdown-menu">\r\n        <li><a href="#!/show/?key=our-services">Our Services Explained</a></li>\r\n        <li><a href="#!/show/?key=business-packages">Business Packages</a></li>\r\n    </ul>\r\n</li>\r\n<li><a href="#!/show/?key=contact-us">Contact Us</a></li>\r\n<li><a href="/news">Industry News</a></li>\r\n<li><a href="#!/show/?key=graduate-recruitment">Graduate Recruitment</a></li>\r\n<li><a href="#!/show/?key=community-network">Community Network</a></li>\r\n<li class="dropdown">\r\n    <a class="dropdown-toggle" data-toggle="dropdown" href="#!/show/?key=quarterly">Current Initiatives<span class="caret"></span></a>\r\n    <ul class="dropdown-menu">\r\n        <li><a href="#!/show/?key=quarterly-awards">Industry Awards</a></li>\r\n        <li><a href="#!/show/?key=entrepreneurial-innovation">Entrepreneurial Innovation Station</a></li>\r\n        <li><a href="#!/show/?key=technology-showcase">Technology Showcase</a></li>\r\n        <li><a href="#!/show/?key=mentoring">Global Mentoring Platform</a></li>\r\n    </ul>\r\n</li>\r\n<li><a href="#!/show/?key=business-advertising-opportunities">Business Advertising Opportunities</a></li>\r\n<li><a href="#!/show/?key=nonExecutive-Board">Join our Non-Executive Board</a></li>\r\n';});
 
 
 define('text!template/global/nomination-navbar-partial-view.html',[],function () { return '<li><a href="#!">Home</a></li>\r\n<li><a href="*|base-app-url|*">Back To User Area (Panel)</a></li>';});
@@ -2004,7 +2010,207 @@ define('text!template/home/sponsor-partial-view.html',[],function () { return '<
 
         // show
         function show() {
-            contents.getByKey(config['aWebSiteAboutUsContentKey'], 'About Us');
+            contents.getByKey(config['aWebSiteAboutUsContentKey'], 'Introduction');
+        }
+
+        return {
+            show: show
+        };
+
+    });
+
+})();
+(function () {
+    'use strict';
+
+    define('service/efficiency.System',[
+        'jquery',
+        'service/config',
+        'service/utilities',
+        'service/contents'
+    ], function ($, config, utilities, contents) {
+
+        // this class is a view class so feel free to do what you need !
+        // DOM objects
+
+        // show
+        function show() {
+            contents.getByKey(config['aWebSiteEfficiencySystemContentKey'], 'Our Efficiency System');
+        }
+
+        return {
+            show: show
+        };
+
+    });
+
+})();
+(function () {
+    'use strict';
+
+    define('service/our.Services',[
+        'jquery',
+        'service/config',
+        'service/utilities',
+        'service/contents'
+    ], function ($, config, utilities, contents) {
+
+        // this class is a view class so feel free to do what you need !
+        // DOM objects
+
+        // show
+        function show() {
+            contents.getByKey(config['aWebSiteOurServicesContentKey'], 'Our Services');
+        }
+
+        return {
+            show: show
+        };
+
+    });
+
+})();
+(function () {
+    'use strict';
+
+    define('service/business.Packages',[
+        'jquery',
+        'service/config',
+        'service/utilities',
+        'service/contents'
+    ], function ($, config, utilities, contents) {
+
+        // this class is a view class so feel free to do what you need !
+        // DOM objects
+
+        // show
+        function show() {
+            contents.getByKey(config['aWebSiteBusinessPackagesContentKey'], 'Business Packages');
+        }
+
+        return {
+            show: show
+        };
+
+    });
+
+})();
+(function () {
+    'use strict';
+
+    define('service/entrepreneurial.Innovation',[
+        'jquery',
+        'service/config',
+        'service/utilities',
+        'service/contents'
+    ], function ($, config, utilities, contents) {
+
+        // this class is a view class so feel free to do what you need !
+        // DOM objects
+
+        // show
+        function show() {
+            contents.getByKey(config['aWebSiteEntrepreneurialInnovationContentKey'], 'Entrepreneurial Innovation');
+        }
+
+        return {
+            show: show
+        };
+
+    });
+
+})();
+(function () {
+    'use strict';
+
+    define('service/technology.Showcase',[
+        'jquery',
+        'service/config',
+        'service/utilities',
+        'service/contents'
+    ], function ($, config, utilities, contents) {
+
+        // this class is a view class so feel free to do what you need !
+        // DOM objects
+
+        // show
+        function show() {
+            contents.getByKey(config['aWebSiteTechnologyShowcaseContentKey'], 'Technology Showcase');
+        }
+
+        return {
+            show: show
+        };
+
+    });
+
+})();
+(function () {
+    'use strict';
+
+    define('service/mentoring',[
+        'jquery',
+        'service/config',
+        'service/utilities',
+        'service/contents'
+    ], function ($, config, utilities, contents) {
+
+        // this class is a view class so feel free to do what you need !
+        // DOM objects
+
+        // show
+        function show() {
+            contents.getByKey(config['aWebSiteMentoringContentKey'], 'Mentoring');
+        }
+
+        return {
+            show: show
+        };
+
+    });
+
+})();
+(function () {
+    'use strict';
+
+    define('service/businessAdvertising.Opportunities',[
+        'jquery',
+        'service/config',
+        'service/utilities',
+        'service/contents'
+    ], function ($, config, utilities, contents) {
+
+        // this class is a view class so feel free to do what you need !
+        // DOM objects
+
+        // show
+        function show() {
+            contents.getByKey(config['aWebSiteBusinessAdvertisingOpportunitiesContentKey'], 'Business Advertising Opportunities');
+        }
+
+        return {
+            show: show
+        };
+
+    });
+
+})();
+(function () {
+    'use strict';
+
+    define('service/nonExecutive.Board',[
+        'jquery',
+        'service/config',
+        'service/utilities',
+        'service/contents'
+    ], function ($, config, utilities, contents) {
+
+        // this class is a view class so feel free to do what you need !
+        // DOM objects
+
+        // show
+        function show() {
+            contents.getByKey(config['aWebSiteNonExecutiveBoardContentKey'], 'NonExecutive Board');
         }
 
         return {
@@ -2285,7 +2491,7 @@ define('text!template/email/contact-us-partial-view.html',[],function () { retur
 
 })();
 
-define('text!template/sign-up-partial-view.html',[],function () { return '<div id="partial-wrapper" class="container animated fadeIn">\r\n    <h1>Sign Up</h1>\r\n    <div class="row">\r\n        <div class="table-responsive">\r\n            <table id="table-sign-up" class="table table-striped">\r\n                <tbody>\r\n                    <tr class="gray-row">\r\n                        <!--<th scope="row">-->\r\n                        <!--</th>-->\r\n                        <td class="title-row" rowspan="2">\r\n                            <div id="image-container">\r\n                                <img src="https://cdn.oildiversity.com/app/images/logo/logo-solo.svg" class="img-responsive logo-solo">\r\n                                <img src="https://cdn.oildiversity.com/app/images/logo/logo-type-horizontal.svg" class="img-responsive logo-type-horizontal">\r\n                                <span>Services & Corporate</span>\r\n                            </div>\r\n                        </td>\r\n                        <th>PLATINUM PACKAGE</th>\r\n                        <th>GOLD PACKAGE</th>\r\n                        <th>SILVER PACKAGE</th>\r\n                        <!--<th>BRONZE</th>-->\r\n                    </tr>\r\n\r\n                    <tr class="green-row">\r\n                        <th>(Price on Request)</th>\r\n                        <th>(Price on Request)</th>\r\n                        <th>(Price on Request)</th>\r\n                        <!--<th>(Price on Request)</th>-->\r\n                    </tr>\r\n                    <tr scope="row">\r\n                        <th scope="row">COMPANY TYPE</th>\r\n                        <td>\r\n                            <b>\r\n                                OILFIELD,NATIONAL<br />\r\n                                AND MULTI-NATIONAL OIL COMPANIES\r\n                            </b>\r\n                        </td>\r\n                        <td>\r\n                            <b> SME’S </b><br />\r\n                            companies with < 100 personnel<br />  with an annual turnover <br /> of less than 50 million USD per annum.\r\n                        </td>\r\n                        <td>\r\n                            <b> BUSINESS START UPS </b><br />\r\n                            Companies within their<br /> 1st year in business.\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">COMMUNITY NETWORK</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">EMPLOYEE INTERNATIONALISATION PROGRAMME</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">GRADUATE RECRUITMENT</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">MENTORING PROGRAMME</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">REDUNDANCY/SHARED WORKFORCE RESOURCE</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">BUSINESS COLLABORATION</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">RIG/VESSEL AVAILABILITY</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">ACCESS & PARTICIPATION WITH INDUSTRY STATISTICS</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">LOGO FEATURE – WEBSITE, PROMOTIONAL MEDIA & LITERATURE</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">PARTICIPATION TO ALL ODG INDUSTRY EVENTS</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">INDUSTRY AWARDS</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">GLOBAL RECRUITMENT</th>\r\n                        <td>Unlimited</td>\r\n                        <td>\r\n                            Unlimited Adverts<br />\r\n                            \r\n                        </td>\r\n                        <td>\r\n                            200 Adverts<br />\r\n                            \r\n                        </td>\r\n                        <!--<td>\r\n            100 Adverts<br/>\r\n            2 x Users<br/>\r\n            Unlimited Search\r\n        </td>-->\r\n                    </tr>\r\n                 \r\n                    <tr>\r\n                        <th scope="row">BANNER ADVERTISING ON WEBSITE</th>\r\n                        <td>2 x Month</td>\r\n                        <td>1 x Month</td>\r\n                        <td>1 x Month</td>\r\n                        <!--<td></td>-->\r\n                    </tr>\r\n                    <!--<tr>\r\n                        <th scope="row">HR DOCUMENT LIBRARY</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>-->\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    <!--</tr>-->\r\n                    <tr>\r\n                        <th scope="row">\r\n                            USERS<br />\r\n                            <small>\r\n                                National<br />\r\n                                Regional<br />\r\n                                Global<br />\r\n                            </small>\r\n                        </th>\r\n                        <td>5<br/>10<br/>15<br/></td>\r\n                        <td>2<br/>5<br/>10<br/></td>\r\n                        <td>2<br/>5<br/><br/></td>\r\n                    </tr>\r\n                    <!--<tr>\r\n                        <th scope="row">\r\n                            TRAINING<br />\r\n                            <small>\r\n                                Leadership<br />\r\n                                Change Management<br />\r\n                                Diversity and Inclusion\r\n                            </small>\r\n                        </th>\r\n                        <td></td>\r\n                        <td></td>\r\n                        <td></td>\r\n                        <td></td>\r\n                    </tr>-->\r\n                    <!--<tr>\r\n                        <th scope="row">CONTINUED SUPPORT THROUGH TRAINING IMPLEMENTATION</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td></td>\r\n                        <td></td>\r\n                        <td></td>\r\n                    </tr>-->\r\n                    <tr>\r\n                        <th scope="row">NOMINATED JUDGING REPRESENTATIVES FOR AWARDS</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td></td>\r\n                        <td></td>\r\n                        <!--<td></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">SPONSORSHIP OF AN AWARD</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td></td>\r\n                        <td></td>\r\n                        <!--<td></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">ODG COLLABORATIVE PANNEL</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td></td>\r\n                        <td></td>\r\n                        <!--<td></td>-->\r\n                    </tr>\r\n                    <tr id="button-wrapper">\r\n                        <th></th>\r\n                        <td>\r\n                            <a href="*|base-app-url|*#/signup?l=en&pc=platinumPlan">Sign Up</a>\r\n                        </td>\r\n                        <td>\r\n                            <a href="*|base-app-url|*#/signup?l=en&pc=goldPlan">Sign Up</a>\r\n                        </td>\r\n                        <td>\r\n                            <a href="*|base-app-url|*#/signup?l=en&pc=silverPlan">Sign Up</a>\r\n                        </td>\r\n                        <!--<td>\r\n            <a href="*|base-app-url|*#/signup?l=en&pc=bronzePlan">Sign Up</a>\r\n        </td>-->\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n    </div>\r\n</div>';});
+define('text!template/sign-up-partial-view.html',[],function () { return '<div id="partial-wrapper" class="container animated fadeIn">\r\n    <h1>Sign Up</h1>\r\n    <div class="row">\r\n        <div class="table-responsive">\r\n            <table id="table-sign-up" class="table table-striped">\r\n                <tbody>\r\n                    <tr class="gray-row">\r\n                        <!--<th scope="row">-->\r\n                        <!--</th>-->\r\n                        <td class="title-row" rowspan="2">\r\n                            <div id="image-container">\r\n                                <img src="https://cdn.oildiversity.com/app/images/logo/logo-solo.svg" class="img-responsive logo-solo">\r\n                                <img src="https://cdn.oildiversity.com/app/images/logo/logo-type-horizontal.svg" class="img-responsive logo-type-horizontal">\r\n                                <span>Services & Corporate</span>\r\n                            </div>\r\n                        </td>\r\n                        <th>PLATINUM PACKAGE</th>\r\n                        <th>GOLD PACKAGE</th>\r\n                        <th>SILVER PACKAGE</th>\r\n                        <!--<th>BRONZE</th>-->\r\n                    </tr>\r\n\r\n                    <tr class="green-row">\r\n                        <th>(Price on Request)</th>\r\n                        <th>(Price on Request)</th>\r\n                        <th>(Price on Request)</th>\r\n                        <!--<th>(Price on Request)</th>-->\r\n                    </tr>\r\n                    <tr scope="row">\r\n                        <th scope="row">COMPANY TYPE</th>\r\n                        <td>\r\n                            <b>\r\n                                OILFIELD,NATIONAL<br />\r\n                                AND MULTI-NATIONAL OIL COMPANIES\r\n                            </b>\r\n                        </td>\r\n                        <td>\r\n                            <b> SME’S </b><br />\r\n                            companies with < 100 personnel<br />  with an annual turnover <br /> of less than 50 million USD per annum.\r\n                        </td>\r\n                        <td>\r\n                            <b> BUSINESS START UPS </b><br />\r\n                            Companies within their<br /> 1st year in business.\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">COMMUNITY NETWORK</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">EMPLOYEE INTERNATIONALISATION PROGRAMME</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">GRADUATE RECRUITMENT</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">MENTORING PROGRAMME</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">REDUNDANCY/SHARED WORKFORCE RESOURCE</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">BUSINESS COLLABORATION</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">RIG/VESSEL AVAILABILITY</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">ACCESS & PARTICIPATION WITH INDUSTRY STATISTICS</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">LOGO FEATURE – WEBSITE, PROMOTIONAL MEDIA & LITERATURE</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">PARTICIPATION TO ALL ODG INDUSTRY EVENTS</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">INDUSTRY AWARDS</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">GLOBAL RECRUITMENT</th>\r\n                        <td>Unlimited</td>\r\n                        <td>\r\n                            Unlimited<br />\r\n                            \r\n                        </td>\r\n                        <td>\r\n                            200 Adverts<br />\r\n                            \r\n                        </td>\r\n                        <!--<td>\r\n            100 Adverts<br/>\r\n            2 x Users<br/>\r\n            Unlimited Search\r\n        </td>-->\r\n                    </tr>\r\n                 \r\n                    <tr>\r\n                        <th scope="row">BANNER ADVERTISING ON WEBSITE</th>\r\n                        <td>2 x Month</td>\r\n                        <td>1 x Month</td>\r\n                       \r\n                        <!--<td></td>-->\r\n                    </tr>\r\n                    <!--<tr>\r\n                        <th scope="row">HR DOCUMENT LIBRARY</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td><i class="fa fa-check"></i></td>-->\r\n                        <!--<td><i class="fa fa-check"></i></td>-->\r\n                    <!--</tr>-->\r\n                    <tr>\r\n                        <th scope="row">\r\n                            USERS<br />\r\n                            <small>\r\n                                National<br />\r\n                                Regional<br />\r\n                                Global<br />\r\n                            </small>\r\n                        </th>\r\n                        <td>5<br/>10<br/>15<br/></td>\r\n                        <td>3<br/>5<br/>10<br/></td>\r\n                        <td>2<br/>3<br/>Unlimited<br/></td>\r\n                    </tr>\r\n                    <!--<tr>\r\n                        <th scope="row">\r\n                            TRAINING<br />\r\n                            <small>\r\n                                Leadership<br />\r\n                                Change Management<br />\r\n                                Diversity and Inclusion\r\n                            </small>\r\n                        </th>\r\n                        <td></td>\r\n                        <td></td>\r\n                        <td></td>\r\n                        <td></td>\r\n                    </tr>-->\r\n                    <!--<tr>\r\n                        <th scope="row">CONTINUED SUPPORT THROUGH TRAINING IMPLEMENTATION</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td></td>\r\n                        <td></td>\r\n                        <td></td>\r\n                    </tr>-->\r\n                    <tr>\r\n                        <th scope="row">NOMINATED JUDGING REPRESENTATIVES FOR AWARDS</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td></td>\r\n                        <td></td>\r\n                        <!--<td></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">SPONSORSHIP OF AN AWARD</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td></td>\r\n                        <td></td>\r\n                        <!--<td></td>-->\r\n                    </tr>\r\n                    <tr>\r\n                        <th scope="row">ODG COLLABORATIVE PANNEL</th>\r\n                        <td><i class="fa fa-check"></i></td>\r\n                        <td></td>\r\n                        <td></td>\r\n                        <!--<td></td>-->\r\n                    </tr>\r\n                    <tr id="button-wrapper">\r\n                        <th></th>\r\n                        <td>\r\n                            <a href="*|base-app-url|*#/signup?l=en&pc=platinumPlan">Sign Up</a>\r\n                        </td>\r\n                        <td>\r\n                            <a href="*|base-app-url|*#/signup?l=en&pc=goldPlan">Sign Up</a>\r\n                        </td>\r\n                        <td>\r\n                            <a href="*|base-app-url|*#/signup?l=en&pc=silverPlan">Sign Up</a>\r\n                        </td>\r\n                        <!--<td>\r\n            <a href="*|base-app-url|*#/signup?l=en&pc=bronzePlan">Sign Up</a>\r\n        </td>-->\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n    </div>\r\n</div>';});
 
 
 define('text!template/services-partial-view.html',[],function () { return '<div class="row">\r\n    <div class="table-responsive">\r\n        <table id="table-green" class="table table-striped">\r\n            <thead class="green-row">\r\n            <tr>\r\n                <th>SERVICES</th>\r\n                <th>DESCRIPTION</th>\r\n            </tr>\r\n            </thead>\r\n            <tbody>\r\n            <tr>\r\n                <td>COMMUNITY NETWORK</td>\r\n                <td>Function allowing partners to promote their business and services to all other affiliated partners, search for Suppliers, Products, and Services.</td>\r\n            </tr>\r\n            <tr>\r\n                <td>GRADUATE SHARE SCHEME</td>\r\n                <td>An inter-company initiative to encourage companies to multi train their graduate candidates and encourage business collaboration.  This gives graduates the chance to gain International exposure and multi-discipline training.  These journeys will be followed through our website and magazine to promote the advantages of Business Collaboration.</td>\r\n            </tr>\r\n            <tr>\r\n                <td>GRADUATE RECRUITMENT</td>\r\n                <td>Advertise all your yearly graduate campaigns</td>\r\n            </tr>\r\n            <tr>\r\n                <td>MENTORING PROGRAMME</td>\r\n                <td>Join our Global mentoring platform, fast track your personnel with first class mentoring from Internationally recognised leaders in the industry around the globe.</td>\r\n            </tr>\r\n            <tr>\r\n                <td>REDUNDANCY PORTAL</td>\r\n                <td>A Business Collaboration initiative to assist personnel or contractors whom are to be made redundant, or; coming to the end of their contract to be viewed, verified, and recruited by all partners.\r\n                    This is a new initiative to reduce partners costs, encourage business collaboration and keep our highly skilled personnel in the workforce.\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n                <td>BUSINESS COLLABORATION</td>\r\n                <td>Partners can list any tender, non-tender requirement(s), procure suppliers, equipment, products, services and know how within the\r\n                    Oil Diversity community.</td>\r\n            </tr>\r\n            <tr>\r\n                <td>RIG/VESSEL AVAILABILITY</td>\r\n                <td>View all Rig/Vessel specifications and availability around the world.</td>\r\n            </tr>\r\n            <tr>\r\n                <td>ACCESS & PARTICIPATION WITH INDUSTRY STATISTICS</td>\r\n                <td>Active participation in all Global Industry Statistics and access to all statistics on-line.</td>\r\n            </tr>\r\n            <tr>\r\n                <td>LOGO FEATURE – WEBSITE, PROMOTIONAL MEDIA & LITERATURE</td>\r\n                <td>All participating Partners logos will be featured on the Oil Diversity Global website and all our promotional media and literature associated\r\n                    with supporting Diversity & Inclusion within the Oil & Energy Industry.  Premier affiliated companies will also be contacted monthly for all\r\n                    D&I, Business Collaboration, New Employees/On the Move and PR for print online and in our Quarterly magazines.  Please note we will\r\n                    also add a click through to your website from the logo to a page of your choosing.</td>\r\n            </tr>\r\n            <tr>\r\n                <td>INDUSTRY AWARDS</td>\r\n                <td>Entry of all employees into all Oil Diversity Global Quarterly Awards and associated press. (Sponsorship included in some packages which\r\n                    gives a company dedicated sponsorship of an industry award of their choice throughout the year).</td>\r\n            </tr>\r\n            <tr>\r\n                <td>GLOBAL RECRUITMENT</td>\r\n                <td>Post vacancies, search candidates and manage applications in our online management system. All positions advertised across our Global social media & press.  Also marketed directly to relevant candidates.\r\n\r\n\r\n                    (Please note to maintain the integrity of the site and attract top quality personnel this site will only be open to affiliated partners\r\n                    and will not be accessible to any recruitment Companies or 3rd parties).\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n                <td>QUARTERLY MAGAZINE</td>\r\n                <td>Access to Advertising in our Quarterly Magazine.  Magazine is currently distributed to 3000 companies Globally and is growing monthly.\r\n                    Please see attached partnership tiers for more information.</td>\r\n            </tr>\r\n            <tr>\r\n                <td>BANNER ADVERTISING ON WEBSITE</td>\r\n                <td>Have a Banner Advertisement on our website to promote your company, promotions, and campaigns.  These can be changed monthly.\r\n                    Please see attached partnership tiers for more information.</td>\r\n            </tr>\r\n            <tr>\r\n                <td>HR DOCUMENT LIBRARY</td>\r\n                <td>Access a full Global library of Diversity & Inclusion, Change Management and Leadership strategy documents and processes.</td>\r\n            </tr>\r\n            <tr>\r\n                <td>\r\n                    TRAINING<br/>\r\n                    <small>\r\n                        Leadership<br/>\r\n                        Change Management<br/>\r\n                        Diversity and Inclusion\r\n                    </small>\r\n                </td>\r\n                <td>One of our dedicated Oil Diversity Global Consultants will evaluate where your company is currently at regarding Leadership, Change\r\n                    Management and Diversity & Inclusion strategy.  They will then work with your management team to assess what you would like to achieve\r\n                    and help you train your personnel and implement processes and strategy in line with your company strategy.</td>\r\n            </tr>\r\n            <tr>\r\n                <td>SUPPORT THROUGH STRATEGY IMPLEMENTATION</td>\r\n                <td>We will offer telephone support and guidance through the process and strategy implementation phase of your company.\r\n                    (Partnership Tier dependent)</td>\r\n            </tr>\r\n            <tr>\r\n                <td>NOMINATED JUDGING REPRESENTATIVES FOR AWARDS</td>\r\n                <td>Nominated judging representatives for all Oil Diversity Global Awards.</td>\r\n            </tr>\r\n            <tr>\r\n                <td>SPONSORSHIP OF AN AWARD</td>\r\n                <td>Full sponsorship of an award of your choice throughout the year.</td>\r\n            </tr>\r\n            <tr>\r\n                <td>PARTICIPATION TO ALL ODG INDUSTRY EVENTS</td>\r\n                <td>Oil Diversity Global will be organising events around the world for both affiliated and non-affiliated companies discussing Diversity & Inclusion,\r\n                    Change Management & Leadership and Business Collaboration.  We will be asking our Partners for representation, speakers and\r\n                    collaboration at these events.</td>\r\n            </tr>\r\n            <tr>\r\n                <td>ODG COLLABORATIVE PANNEL</td>\r\n                <td>ODG will be forming its own non-typical ‘non-executive’ board.  This will consist of representation from our Platinum sponsors and we will\r\n                    discuss regularly new initiatives, products, and services we can continue to add to the site to ensure the most cost effective, efficient system\r\n                    for all our users.\r\n\r\n                    We will also be looking at ‘best practice’ for Business Collaboration and bringing our partners together.</td>\r\n            </tr>\r\n            </tbody>\r\n        </table>\r\n    </div>\r\n</div>';});
@@ -2910,8 +3116,7 @@ define('text!template/search/details-partial-view.html',[],function () { return 
 
                     dataAccess.DataJobsSearch.getCountries({
 
-                        success: function (data) {
-                            debugger
+                        success: function (data) {                            
                             var item = { 'value' : '', 'text' : 'All' };
                             countries.push(item);
 
@@ -2944,8 +3149,7 @@ define('text!template/search/details-partial-view.html',[],function () { return 
         }
 
         // drop down countries
-        function fullDropDownCountries(wrapper, countryCodeValue) {
-            debugger
+        function fullDropDownCountries(wrapper, countryCodeValue) {            
             wrapper.empty();
             $.each(countries, function (index, country) {
                 wrapper.append($('<option>', {value: country['value'], text: country['text']}));
@@ -2957,8 +3161,7 @@ define('text!template/search/details-partial-view.html',[],function () { return 
         }
 
         // text
-        function getCountryText(codeValue) {
-            debugger
+        function getCountryText(codeValue) {            
             var text = '';
             $.each(countries, function (index, country) {
                 if (countries.hasOwnProperty(index)) {
@@ -3438,6 +3641,14 @@ define('text!template/search/details-partial-view.html',[],function () { return 
             'service/main',
             'service/sponsors',
             'service/about.us',
+            'service/efficiency.System',
+            'service/our.Services',
+            'service/business.Packages',
+            'service/entrepreneurial.Innovation',
+            'service/technology.Showcase',
+            'service/mentoring',
+            'service/businessAdvertising.Opportunities', 
+             'service/nonExecutive.Board',
             'service/contact.us',
             'service/sign.up',
             'service/graduate.recruitment',
@@ -3461,6 +3672,14 @@ define('text!template/search/details-partial-view.html',[],function () { return 
             main,
             sponsors,
             aboutUs,
+            efficiencySystem,
+            ourServices,
+            businessPackages,
+            entrepreneurialInnovation,
+            technologyShowcase,
+            Mentoring,
+            businessAdvertisingOpportunities,
+            nonExecutiveBoard,
             contactUs,
             signUp,
             graduateRecruitment,
@@ -3531,6 +3750,54 @@ define('text!template/search/details-partial-view.html',[],function () { return 
                         utilities.disableForm(otherContentWrapper);
                         contents.getAllEnglishWebsite().done(function () {
                             aboutUs.show();
+                        });
+                        break;
+                    case 'efficiency-system':
+                        utilities.disableForm(otherContentWrapper);
+                        contents.getAllEnglishWebsite().done(function () {
+                            efficiencySystem.show();
+                        });
+                        break;
+                    case 'our-services':
+                        utilities.disableForm(otherContentWrapper);
+                        contents.getAllEnglishWebsite().done(function () {
+                            ourServices.show();
+                        });
+                        break;
+                    case 'business-packages':
+                        utilities.disableForm(otherContentWrapper);
+                        contents.getAllEnglishWebsite().done(function () {
+                            businessPackages.show();
+                        });
+                        break;
+                    case 'entrepreneurial-innovation':
+                        utilities.disableForm(otherContentWrapper);
+                        contents.getAllEnglishWebsite().done(function () {
+                            entrepreneurialInnovation.show();
+                        });
+                        break;
+                    case 'technology-showcase':
+                        utilities.disableForm(otherContentWrapper);
+                        contents.getAllEnglishWebsite().done(function () {
+                            technologyShowcase.show();
+                        });
+                        break;
+                    case 'mentoring':
+                        utilities.disableForm(otherContentWrapper);
+                        contents.getAllEnglishWebsite().done(function () {
+                            Mentoring.show();
+                        });
+                        break;
+                    case 'business-advertising-opportunities':
+                        utilities.disableForm(otherContentWrapper);
+                        contents.getAllEnglishWebsite().done(function () {
+                            businessAdvertisingOpportunities.show();
+                        });
+                        break;
+                    case 'nonExecutive-Board':
+                        utilities.disableForm(otherContentWrapper);
+                        contents.getAllEnglishWebsite().done(function () {
+                            nonExecutiveBoard.show();
                         });
                         break;
                     case 'quarterly-awards' :

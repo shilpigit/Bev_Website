@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\images",
+    "\\js",
+    "\\js\\app",
+    "\\js\\app\\service",
+    "\\js\\app\\view"
   ],
+  "SelectedNode": "\\js\\app\\service\\businessAdvertising.Opportunities.js",
   "PreviewInSolutionExplorer": false
 }

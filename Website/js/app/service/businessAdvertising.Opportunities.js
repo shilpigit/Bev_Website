@@ -13,7 +13,7 @@
 
         // show
         function show() {
-            contents.getByKey(config['aWebSiteAboutUsContentKey'], 'Introduction');
+            contents.getByKey(config['aWebSiteBusinessAdvertisingOpportunitiesContentKey'], 'Business Advertising Opportunities');
         }
 
         return {

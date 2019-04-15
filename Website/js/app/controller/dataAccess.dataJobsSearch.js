@@ -11,8 +11,7 @@
             newItem: newItem
         };
 
-        function init() {
-            debugger
+        function init() {            
             amplify.request.define('getSearch', 'ajax', {
                 url: config.baseApiAppUrl + 'vacancy/search/advanced?searchPhrase={searchPhrase}&orderByCodeValue={orderByCodeValue}&countryCodeValue={countryCodeValue}&industryExperienceCodeValue={industryExperienceCodeValue}&employmentTypeCodeValue={employmentTypeCodeValue}&salarySoughtCurrencyCodeValue={salarySoughtCurrencyCodeValue}&salarySoughtAmount={salarySoughtAmount}&educationCodeValue={educationCodeValue}&summaryOfExperienceCategoryCodeValue={summaryOfExperienceCategoryCodeValue}&experienceDisciplineFirstLevelCodeValue={experienceDisciplineFirstLevelCodeValue}&experienceDisciplineSecondLevelCodeValue={experienceDisciplineSecondLevelCodeValue}&token={token}',
                 dataType: 'json',
@@ -65,8 +64,7 @@
             });
         }
 
-        function getSearch(callbacks, data) {
-            debugger
+        function getSearch(callbacks, data) {            
             return amplify.request({
                 resourceId: 'getSearch',
                 data: data,

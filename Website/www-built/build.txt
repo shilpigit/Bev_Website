@@ -203,6 +203,14 @@ js/app/service/main.js
 text!template/home/sponsor-partial-view.html
 js/app/service/sponsors.js
 js/app/service/about.us.js
+js/app/service/efficiency.System.js
+js/app/service/our.Services.js
+js/app/service/business.Packages.js
+js/app/service/entrepreneurial.Innovation.js
+js/app/service/technology.Showcase.js
+js/app/service/mentoring.js
+js/app/service/businessAdvertising.Opportunities.js
+js/app/service/nonExecutive.Board.js
 js/app/service/logger.js
 text!template/contact-us-partial-view.html
 text!template/email/contact-us-partial-view.html

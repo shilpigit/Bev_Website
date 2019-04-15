@@ -12,6 +12,14 @@
             'service/main',
             'service/sponsors',
             'service/about.us',
+            'service/efficiency.System',
+            'service/our.Services',
+            'service/business.Packages',
+            'service/entrepreneurial.Innovation',
+            'service/technology.Showcase',
+            'service/mentoring',
+            'service/businessAdvertising.Opportunities', 
+             'service/nonExecutive.Board',
             'service/contact.us',
             'service/sign.up',
             'service/graduate.recruitment',
@@ -35,6 +43,14 @@
             main,
             sponsors,
             aboutUs,
+            efficiencySystem,
+            ourServices,
+            businessPackages,
+            entrepreneurialInnovation,
+            technologyShowcase,
+            Mentoring,
+            businessAdvertisingOpportunities,
+            nonExecutiveBoard,
             contactUs,
             signUp,
             graduateRecruitment,
@@ -105,6 +121,54 @@
                         utilities.disableForm(otherContentWrapper);
                         contents.getAllEnglishWebsite().done(function () {
                             aboutUs.show();
+                        });
+                        break;
+                    case 'efficiency-system':
+                        utilities.disableForm(otherContentWrapper);
+                        contents.getAllEnglishWebsite().done(function () {
+                            efficiencySystem.show();
+                        });
+                        break;
+                    case 'our-services':
+                        utilities.disableForm(otherContentWrapper);
+                        contents.getAllEnglishWebsite().done(function () {
+                            ourServices.show();
+                        });
+                        break;
+                    case 'business-packages':
+                        utilities.disableForm(otherContentWrapper);
+                        contents.getAllEnglishWebsite().done(function () {
+                            businessPackages.show();
+                        });
+                        break;
+                    case 'entrepreneurial-innovation':
+                        utilities.disableForm(otherContentWrapper);
+                        contents.getAllEnglishWebsite().done(function () {
+                            entrepreneurialInnovation.show();
+                        });
+                        break;
+                    case 'technology-showcase':
+                        utilities.disableForm(otherContentWrapper);
+                        contents.getAllEnglishWebsite().done(function () {
+                            technologyShowcase.show();
+                        });
+                        break;
+                    case 'mentoring':
+                        utilities.disableForm(otherContentWrapper);
+                        contents.getAllEnglishWebsite().done(function () {
+                            Mentoring.show();
+                        });
+                        break;
+                    case 'business-advertising-opportunities':
+                        utilities.disableForm(otherContentWrapper);
+                        contents.getAllEnglishWebsite().done(function () {
+                            businessAdvertisingOpportunities.show();
+                        });
+                        break;
+                    case 'nonExecutive-Board':
+                        utilities.disableForm(otherContentWrapper);
+                        contents.getAllEnglishWebsite().done(function () {
+                            nonExecutiveBoard.show();
                         });
                         break;
                     case 'quarterly-awards' :

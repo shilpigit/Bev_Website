@@ -42,8 +42,7 @@
 
                     dataAccess.DataJobsSearch.getCountries({
 
-                        success: function (data) {
-                            debugger
+                        success: function (data) {                            
                             var item = { 'value' : '', 'text' : 'All' };
                             countries.push(item);
 
@@ -76,8 +75,7 @@
         }
 
         // drop down countries
-        function fullDropDownCountries(wrapper, countryCodeValue) {
-            debugger
+        function fullDropDownCountries(wrapper, countryCodeValue) {            
             wrapper.empty();
             $.each(countries, function (index, country) {
                 wrapper.append($('<option>', {value: country['value'], text: country['text']}));
@@ -89,8 +87,7 @@
         }
 
         // text
-        function getCountryText(codeValue) {
-            debugger
+        function getCountryText(codeValue) {            
             var text = '';
             $.each(countries, function (index, country) {
                 if (countries.hasOwnProperty(index)) {

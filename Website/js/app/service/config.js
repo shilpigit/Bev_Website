@@ -6,11 +6,11 @@
         return {
 
             //  Live            
-            // baseApiUrl: 'https://api.oildiversity.com/api/',
-            // baseUrl: 'https://api.oildiversity.com/',
-            // baseApiAppUrl: 'https://api.oildiversity.com/api/',
-            // baseAppUrl: 'https://app.oildiversity.com/',
-            // baseRedirectImageUrl: 'https://api.oildiversity.com/api/storage/redirect?id=',
+             baseApiUrl: 'https://api.oildiversity.com/api/',
+             baseUrl: 'https://api.oildiversity.com/',
+             baseApiAppUrl: 'https://api.oildiversity.com/api/',
+             baseAppUrl: 'https://app.oildiversity.com/',
+             baseRedirectImageUrl: 'https://api.oildiversity.com/api/storage/redirect?id=',
 
             //  Development 
             //baseApiUrl: 'https://devapi.oildiversity.com/api/',
@@ -20,11 +20,11 @@
             //baseRedirectImageUrl: 'https://devapi.oildiversity.com/api/storage/redirect?id=',
 
             //  Local
-            baseApiUrl: 'http://localhost:7493/api/',
-            baseUrl: 'http://localhost:7493/',
-            baseApiAppUrl: 'http://localhost:7493/api/',
-            baseAppUrl: 'http://localhost:1056/',
-            baseRedirectImageUrl: 'http://localhost:7493/api/storage/redirect?id=',
+            //baseApiUrl: 'http://localhost:7493/api/',
+            //baseUrl: 'http://localhost:7493/',
+            //baseApiAppUrl: 'http://localhost:7493/api/',
+            //baseAppUrl: 'http://localhost:1056/',
+            //baseRedirectImageUrl: 'http://localhost:7493/api/storage/redirect?id=',
             
 
             // content keys
@@ -33,7 +33,15 @@
             aWebSiteQuarterlyMagazineContentKey: 'aWebSiteQuarterlyMagazineContentKey',
             aWebSiteQuarterlyAwardsContentKey: 'aWebSiteQuarterlyAwardsContentKey',
             aWebSiteQuarterlyAwardFormContentKey: 'aWebSiteQuarterlyAwardFormContentKey',
-            aWebSiteFAQContentKey:'aWebSiteFAQContentKey',
+            aWebSiteFAQContentKey: 'aWebSiteFAQContentKey',
+            aWebSiteEfficiencySystemContentKey: 'aWebSiteEfficiencySystemContentKey',
+            aWebSiteOurServicesContentKey: 'aWebSiteOurServicesContentKey',
+            aWebSiteBusinessPackagesContentKey: 'aWebSiteBusinessPackagesContentKey',
+            aWebSiteEntrepreneurialInnovationContentKey: 'aWebSiteEntrepreneurialInnovationContentKey',
+            aWebSiteTechnologyShowcaseContentKey: 'aWebSiteTechnologyShowcaseContentKey',
+            aWebSiteMentoringContentKey: 'aWebSiteMentoringContentKey',
+            aWebSiteBusinessAdvertisingOpportunitiesContentKey: 'aWebSiteBusinessAdvertisingOpportunitiesContentKey',
+            aWebSiteNonExecutiveBoardContentKey:'aWebSiteNonExecutiveBoardContentKey',
 
             // mail
             sendEmailTo: 'bev@oildiversity.com',
