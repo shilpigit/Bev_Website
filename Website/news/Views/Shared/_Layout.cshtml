@@ -108,22 +108,38 @@
             </nav>*@
             <nav id="navbar" class="collapse navbar-collapse navbar-right" role="navigation">
                 <ul id="nav" class="nav navbar-nav">
-                    <li><a href="http://testodgco.azurewebsites.net/#!">Home</a></li>
-                    <li><a href="http://testodgco.azurewebsites.net/#!/show/?key=about-us">About Us</a></li>
-                    <li><a href="http://testodgco.azurewebsites.net/#!/show/?key=contact-us">Contact Us</a></li>
-                    <li class="active"><a href="javascript:void(0)">Industry News</a></li>
-                    <li><a href="http://testodgco.azurewebsites.net/#!/show/?key=graduate-schemes">Graduate Schemes</a></li>
-                    <li><a href="http://testodgco.azurewebsites.net/#!/show/?key=community-network">Community Network</a></li>
-                    <li><a href="http://testodgco.azurewebsites.net/#!/show/?key=#">Technology Showcase</a></li>
-                    <li><a href="http://testodgco.azurewebsites.net/#!/show/?key=#">Entrepreneurial Innovation Station</a></li>
+                    <li><a href="@CommonTools.GetCurrentContextUrl()#!">Home</a></li>
+                    <!--<li><a href="#!/show/?key=about-us">About Us</a></li>-->
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#!/show/?key=quarterly">Current Initiatives<span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="@CommonTools.GetCurrentContextUrl()#!/show/?key=about-us">About Us<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            @*<li><a href="http://testodgco.azurewebsites.net/#!/show/?key=quarterly-magazine">Magazine</a></li>*@
-                            <li><a href="http://testodgco.azurewebsites.net/#!/show/?key=quarterly-awards">Awards</a></li>
+                            <li><a href="@CommonTools.GetCurrentContextUrl()#!/show/?key=about-us">Introduction</a></li>
+                            <li><a href="@CommonTools.GetCurrentContextUrl()#!/show/?key=frequently-asked-questions">FAQ's</a></li>
+                            <li><a href="@CommonTools.GetCurrentContextUrl()#!/show/?key=efficiency-system">Our Efficiency System</a></li>
                         </ul>
                     </li>
-                    <li><a href="http://testodgco.azurewebsites.net/#!/show/?key=frequently-asked-questions">FAQ's</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="@CommonTools.GetCurrentContextUrl()#!/show/?key=">Our Services<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@CommonTools.GetCurrentContextUrl()#!/show/?key=our-services">Our Services Explained</a></li>
+                            <li><a href="@CommonTools.GetCurrentContextUrl()#!/show/?key=business-packages">Business Packages</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="@CommonTools.GetCurrentContextUrl()#!/show/?key=contact-us">Contact Us</a></li>
+                    <li><a href="javascript:void(0)">Industry News</a></li>
+                    <li><a href="@CommonTools.GetCurrentContextUrl()#!/show/?key=graduate-recruitment">Graduate Recruitment</a></li>
+                    <li><a href="@CommonTools.GetCurrentContextUrl()#!/show/?key=community-network">Community Network</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="@CommonTools.GetCurrentContextUrl()#!/show/?key=quarterly">Current Initiatives<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@CommonTools.GetCurrentContextUrl()#!/show/?key=quarterly-awards">Industry Awards</a></li>
+                            <li><a href="@CommonTools.GetCurrentContextUrl()#!/show/?key=entrepreneurial-innovation">Entrepreneurial Innovation Station</a></li>
+                            <li><a href="@CommonTools.GetCurrentContextUrl()#!/show/?key=technology-showcase">Technology Showcase</a></li>
+                            <li><a href="@CommonTools.GetCurrentContextUrl()#!/show/?key=mentoring">Global Mentoring Platform</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="@CommonTools.GetCurrentContextUrl()#!/show/?key=business-advertising-opportunities">Business Advertising Opportunities</a></li>
+                    <li><a href="@CommonTools.GetCurrentContextUrl()#!/show/?key=nonExecutive-Board">Join our Non-Executive Board</a></li>
                 </ul>
         </nav>
             <!-- End Main Nav -->
